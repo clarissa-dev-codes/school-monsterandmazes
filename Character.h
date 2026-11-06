@@ -7,6 +7,7 @@
 #define CHARACTER_H
 
 #include "Item.h"
+#include "Possessions.h"
 
 class Character{
     private:
@@ -15,7 +16,8 @@ class Character{
         int m_iAlignment;
         int m_iHitPoints; 
         int m_iCharTraits[6]; //for Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma
-        Item m_Items[10]; //array of 10 items
+        Possessions *m_pBattleItems;
+        Possessions *m_pTreasureItems;
 
     public:
         Character *m_pNext; //pointer to next character in list
